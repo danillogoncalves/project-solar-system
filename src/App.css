@@ -1,3 +1,49 @@
 .App {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.solar-system, .missions {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.solar-system .cards div {
+  text-align: center;
+}
+
+.missions .cards {
+  display: flex;
+  flex-flow: wrap;
+}
+
+/* .missions .cards {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+} */
+
+.missions .cards div {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+  width: 20%;
 }

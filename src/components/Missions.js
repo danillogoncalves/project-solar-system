@@ -9,14 +9,14 @@ const missionsList = missions
 class Missions extends Component {
   render() {
     return (
-      <>
-        <div data-testid="missions">
+      <section className="missions">
+        <div className="title" data-testid="missions">
           <Title headline="Missões" />
         </div>
-        <div>
+        <div className="cards">
           { missionsList }
         </div>
-      </>
+      </section>
     );
   }
 }
