@@ -1,19 +1,42 @@
-.App {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-image: url('./images/background.png');
+  color: aliceblue;
+  font-family: Montserrat , sans-serif;
+}
+
+.App {
   text-align: center;
 }
 
 .header {
   display: flex;
+  font-size: 2em;
   justify-content: center;
+  text-align: center;
 }
 
 .solar-system, .missions {
   align-items: center;
   display: flex;
   flex-flow: column;
+  margin: 30px auto;
+  width: 95%;
+}
+
+.title {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid aliceblue;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+  width: 60%;
 }
 
 .cards {
@@ -22,7 +45,17 @@
 }
 
 img {
+  max-width: 90%;
+  transition: 0.5s;
+}
+
+img:hover {
   max-width: 100%;
+}
+
+.solar-system .cards {
+  align-items: center;
+  height: 20vh;
 }
 
 .solar-system .cards div {
@@ -34,16 +67,23 @@ img {
   flex-flow: wrap;
 }
 
-/* .missions .cards {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-} */
-
 .missions .cards div {
-  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid aliceblue;
   border-radius: 10px;
   margin: 15px;
-  padding: 10px;
-  width: 20%;
+  padding: 20px;
+  width: 350px;
+}
+
+@media screen and ( max-width : 813px ) {
+
+  .solar-system .cards {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  .missions .cards div {
+    width: 90%;
+  }
 }
