@@ -1,4 +1,5 @@
 * {
+  border: 0;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,6 +19,7 @@ body {
   display: flex;
   font-size: 2em;
   justify-content: center;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -37,6 +39,10 @@ body {
   padding: 20px;
   text-align: center;
   width: 60%;
+}
+
+.title h2 {
+  font-size: 2rem;
 }
 
 .cards {
@@ -76,7 +82,18 @@ img:hover {
   width: 350px;
 }
 
+.missions .cards div p:nth-child( 1 ) {
+  border-bottom: 1px solid aliceblue;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 @media screen and ( max-width : 813px ) {
+
+  img {
+    max-width: 100%;
+  }
 
   .solar-system .cards {
     flex-wrap: wrap;
